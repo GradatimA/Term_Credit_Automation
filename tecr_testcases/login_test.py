@@ -12,11 +12,11 @@ from tecr_utilities.logfile import LogGen
 
 class Test_Login_002:
     appUrl = ReadConfig.getApplicationUrl()
-    UN= ReadConfig.getPassword()
-    PW = ReadConfig.getUsername()
+    UN= ReadConfig.getUsername()
+    PW = ReadConfig.getPassword()
     logger = LogGen.loggen()
 
-    @pytest.mark.sanity
+
     def test_title_001(self,setup):
         self.logger.info("****** title verifications *****:")
         self.driver = setup
@@ -35,7 +35,7 @@ class Test_Login_002:
             self.driver.close()
             assert False
 
-    @pytest.mark.sanity
+
     def testlogo(self,setup):
         self.logger.info("****** title verifications *****:")
         self.driver = setup
@@ -44,7 +44,7 @@ class Test_Login_002:
         self.LP.logo()
         self.driver.quit()
 
-    @pytest.mark.sanity
+
     def testlogin(self,setup):
         self.driver = setup
         self.driver.get(self.appUrl)

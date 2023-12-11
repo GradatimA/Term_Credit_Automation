@@ -13,9 +13,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class ClientOrgPage:
     textbox_username_id = "ContentPlaceHolder1_txtUserName"
-    textbox_password_id = "ctl00$ContentPlaceHolder1$txtPassword"
+    textbox_password_name = "ctl00$ContentPlaceHolder1$txtPassword"
     LoginBtn_xpath = "//body[1]/form[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[7]/input[1]"
-    # logo_xpath = "//body/form[@id='ctl00']/div[@id='ContentPlaceHolder1_upLoginPage']/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"
+    logo_xpath = "//body/form[@id='ctl00']/div[@id='ContentPlaceHolder1_upLoginPage']/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]"
     logout_xpath = "//body[1]/form[1]/div[4]/nav[1]/ul[1]/li[17]/a[1]"
     client_master_linktext = "Client Master"
     client_org_xpath = "//a[contains(text(),'Client Organization')]"
@@ -73,10 +73,10 @@ class ClientOrgPage:
 
 
     def setUserName(self, username):
-        self.driver.find_element(By.NAME, self.textbox_username_id).send_keys(username)
+        self.driver.find_element(By.ID, self.textbox_username_id).send_keys(username)
 
     def setpassword(self, password):
-        self.driver.find_element(By.NAME, self.textbox_password_id).send_keys(password)
+        self.driver.find_element(By.NAME, self.textbox_password_name).send_keys(password)
 
     def submit(self):
         self.driver.find_element(By.XPATH, self.LoginBtn_xpath).click()

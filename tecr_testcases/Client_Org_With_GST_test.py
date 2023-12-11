@@ -1,5 +1,5 @@
 import time
-
+from tecr_pageobjects.Login import LoginPage
 from tecr_pageobjects.ClientOrg import ClientOrgPage
 
 
@@ -50,10 +50,11 @@ class Test_Login_002:
         self.CLORGPA.submit()
         self.CLORGPA.clickCm()
         self.CLORGPA.clickclo()
-        time.sleep(2)
+        time.sleep(3)
         self.CLORGPA.setclientname(self.client_name)
+        time.sleep(3)
         self.CLORGPA.setoccupation(self.occupation)
-        time.sleep(2)
+        time.sleep(3)
         self.CLORGPA.setsalutation(self.sal)
         time.sleep(2)
         self.CLORGPA.setfirstname(self.firsrtname)
@@ -74,11 +75,11 @@ class Test_Login_002:
         self.CLORGPA.setpanno(self.PanNo)
         time.sleep(1)
         self.CLORGPA.setgstnno(self.GstnNo)
-        time.sleep(1)
+        time.sleep(2)
         self.CLORGPA.setloginbased(self.Logbased)
-        time.sleep(1)
+        time.sleep(2)
         self.CLORGPA.setaccessbased(self.accessbased)
-        time.sleep(1)
+        time.sleep(2)
         self.CLORGPA.setemailid(self.emaildidinfo)
         time.sleep(1)
         self.CLORGPA.setjourneytype(self.journeytype)
